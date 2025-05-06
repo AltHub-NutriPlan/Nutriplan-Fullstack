@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../../components/Header.jsx'
 
 const onboardingSteps = [
   {
@@ -173,6 +174,8 @@ const Onboarding = () => {
   };
 
   return (
+    <>
+    <Header/>
     <div className='container'>
       <div className='box'>
         {step < onboardingSteps.length ? (
@@ -431,6 +434,7 @@ const Onboarding = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
