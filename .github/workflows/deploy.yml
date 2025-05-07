@@ -25,5 +25,5 @@ jobs:
           git pull origin main  # Pull latest code
           npm install           # Install dependencies
           npm run build         # Build React app
-          sudo systemctl restart nginx  # Restart Nginx 
+          sudo systemctl restart nginx  # Restart Nginxnn
         EOF
