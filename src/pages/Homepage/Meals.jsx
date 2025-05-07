@@ -1,7 +1,6 @@
 import React from "react";
-import MealCardContainer from "./MealCardContainer.jsx";
-import "./Homepage.css";
-//import '../../styles/Homepage.css';
+import MealCardContainer from '../../components/MealCardContainer.jsx';
+import '../../styles/Homepage.css';
 
 const categorizedMeals = {
   LowSodium: [
