@@ -276,7 +276,7 @@ export default function Homepage() {
                 }}
               >
                 <h2 style={{ color: "#059669", fontSize: "1.5rem", fontWeight: "500" }}>
-                  Hello, John
+                  Hello, Emmanuel
                 </h2>
                 <p style={{ color: "#6b7280", marginBottom: "1.5rem" }}>
                   Your personalized nutrition journey
