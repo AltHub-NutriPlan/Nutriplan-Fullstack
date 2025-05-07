@@ -1,5 +1,7 @@
 import React from "react";
-import MealCardContainer from '../../components/MealCardContainer.jsx';
+import MealCardContainer from "./MealCardContainer.jsx";
+import "./Homepage.css";
+//import '../../styles/Homepage.css';
 
 const categorizedMeals = {
   LowSodium: [
@@ -33,7 +35,7 @@ const categorizedMeals = {
       title: "Orange Juice",
     },
     {
-      imageSrc: "/meals/Beet Smoothie.png",
+      imageSrc: "/meals/beetsmoothie.png",
       altText: "Beet Smoothie",
       title: "Beet Smoothie",
     },
@@ -85,7 +87,7 @@ const Meals = () => {
         <input type="text" placeholder="Search for any meals..." />
         <button>Search</button>
       </div>
-      <div>
+      <div style={{ backgroundColor: "#fffffff",padding: "1rem",  borderRadius: "8px" }}>
         <h2
           style={{ color: "#7879f1", fontSize: "1.125rem", fontWeight: "500" }}
         >
