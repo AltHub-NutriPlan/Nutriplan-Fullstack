@@ -1,0 +1,29 @@
+name: Deploy React App to EC2
+
+on:
+  push:
+    branches:
+      - main  # or your production branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_KEY }}
+
+    - name: SSH into EC2 and Deploy
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
+          cd /var/www/react-app
+          git pull origin main  # Pull latest code
+          npm install           # Install dependencies
+          npm run build         # Build React app
+          sudo systemctl restart nginx  # Restart Nginx to serve the updated build
+        EOF
